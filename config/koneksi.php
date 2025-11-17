@@ -1,15 +1,15 @@
 <?php
 
 $servername = "localhost";
-$database = "uinsi_nim";
+$database = "uinsi32";
+$username = "root";
 $password = "";
-
-$conn = mysqli_connect($servername,$database,$password);
-
+$conn = mysqli_connect($servername, $username, $password, $database);
+  
 if (!$conn) {
-    die("Koneksi Gagal".mysqli_connect_error());
+ 
+    die("Connection failed: " . mysqli_connect_error());
+ 
 }
 
-echo "Koneksi Berhasil";
-mysqli_close();
 ?>
